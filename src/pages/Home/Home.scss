@@ -1,0 +1,309 @@
+.home {
+  color: white;
+  width: 100%;
+
+  // ######################################## BUY SELL SOURCE SECTION ########################################
+
+  #buy-sell-source {
+    .content {
+      padding-top: 10%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      overflow: visible;
+
+      .layered-image {
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        padding-bottom: 8%;
+
+        img {
+          min-width: 60%;
+        }
+      }
+
+      .business-info-text {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 90%;
+
+        .title {
+          font-family: DrukWideBold;
+          font-size: 350%;
+          line-height: 100%;
+          margin-bottom: 30px;
+
+          span {
+            font-family: DrukWideBold;
+            color: var(--vbm-color);
+          }
+        }
+
+        p {
+          font-family: Avenir-Roman;
+          font-size: 20px;
+          max-width: 80%;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1025px) {
+    #buy-sell-source {
+      .content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+  }
+
+  // ######################################## TESTIMONIALS ########################################
+  #testimonials {
+    margin-top: 10%;
+
+    .testimonials-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .testimonials-title {
+        font-size: 120%;
+        font-family: DrukWideBold;
+        padding-bottom: 5%;
+        width: auto;
+        // margin-bottom: 5%;
+      }
+
+      .frames {
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        // padding-bottom: 100px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 960px) {
+    #testimonials {
+      margin-top: 10%;
+
+      .testimonials-content {
+        font-size: 200%;
+
+        .testimonials-title {
+          font-size: 120%;
+          font-family: DrukWideBold;
+          width: auto;
+          // margin-bottom: 5%;
+        }
+
+        .frames {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          align-items: center;
+          width: 80vw;
+        }
+      }
+    }
+  }
+
+  // ######################################## WHAT PEOPLE SAY ########################################
+
+  #what-people-say {
+    // margin-top: 15%;
+
+    .logo-slider {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    .quote-container {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+  }
+
+  @media screen and (min-width: 375px) {
+    #buy-sell-source {
+      // margin-bottom: 40%;
+    }
+  }
+
+  @media screen and (min-width: 400px) {
+    #buy-sell-source {
+      // margin-bottom: 20%;
+    }
+  }
+}
+
+
+@keyframes hover-me {
+  100% {
+    transform: translate3d(0, 20px, 0);
+  }
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  width: 100%;
+
+  .never-miss-a-drop {
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    .pill {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      h3 {
+        padding: 6px;
+        width: max-content;
+        border-radius: 15px;
+        font-family: DrukWideBold;
+        text-align: center;
+        color: var(--body-background);
+        background-color: var(--vbm-color);
+        cursor: pointer;
+      }
+    }
+
+    .logo-container-bottom {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      height: 45%;
+
+      .logo-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      img {
+        max-width: 30%;
+      }
+    }
+
+    @media screen and (min-width: 1025px) {
+      .logo-container-bottom {
+        // margin-top: 10%;
+        width: 100vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .logo-text {
+          display: flex;
+        }  
+
+        img {
+          max-width: 30%;
+        }
+      }
+    }
+  }
+}
+
+#img-display {
+  height: max-content;
+}
+
+@media screen and (max-width:1024px) {
+  #img-display {
+    #gallery {
+      margin-top: 25%;
+    }
+  }
+  
+  #buy-sell-source {
+    .content {
+      padding-top: 10%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      overflow: visible;
+
+      .layered-image {
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        padding-bottom: 8%;
+
+        img {
+          min-width: 60%;
+        }
+      }
+
+      .business-info-text {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 90%;
+
+        .title {
+          font-family: DrukWideBold;
+          font-size: 200% !important;
+          line-height: 90%;
+
+          span {
+            font-family: DrukWideBold;
+            color: var(--vbm-color);
+          }
+        }
+
+        p {
+          font-family: Avenir-Roman;
+          font-size: 1rem;
+          max-width: 100% !important;
+        }
+      }
+    }
+  }
+  #testimonials {
+    margin-top: 10%;
+
+    .testimonials-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .testimonials-title {
+        font-size: 120%;
+        font-family: DrukWideBold;
+        padding-bottom: 5%;
+        width: 50% !important;
+        margin-bottom: 14% !important;
+      }
+
+      .frames {
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding-bottom: 100px;
+      }
+    }
+  }
+}

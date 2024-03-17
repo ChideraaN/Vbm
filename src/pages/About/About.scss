@@ -1,0 +1,98 @@
+#about {
+  text-align: center;
+}
+
+.image-container {
+  display: flex;
+  // height: 100vh;
+  padding-bottom: 100px;
+
+  img {
+    width: 50%;
+  }
+}
+
+@media(max-width:776px){
+  .image-container {
+    height: 100vh;
+ 
+  }
+}
+
+.middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .middle-text {
+    margin: 8% 0px;
+    min-width: 50vw;
+    max-width: 85vw;
+  }
+}
+
+.bottom {
+  // margin-top: 10%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+@media screen and (max-width: 960px) {
+  .hidden {
+    display: none;
+  }
+
+  #top {
+    background-image: url('../../images/sharky.png');
+    width: 100svw;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .bottom-text {
+    padding: 40px 0px;
+    // margin-top: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .middle-text {
+    margin-top: 8%;
+    margin-bottom: 8%;
+  }
+}
+
+#middle-container {
+  .alt-image-container {
+    display: flex;
+    // height: 100vh;
+    flex-direction: row;
+    padding-bottom: 100px;
+  
+    img {
+      width: 50%
+    }
+  }
+  
+}
+@media screen and (max-width: 1024) {
+  #middle-container {
+    .alt-image-container {
+      display: flex;
+      height: 100vh;
+      flex-direction: column;
+      padding-bottom: 100px;
+  
+      img {
+        width: 100%
+      }
+    }
+  }
+}

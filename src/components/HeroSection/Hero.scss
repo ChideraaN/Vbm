@@ -1,0 +1,57 @@
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  height: 75svh;
+  video {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .vbm-image {
+    max-width: 30%;
+    margin-top: 30vh;
+  }
+}
+.centerr{
+  justify-content: center;
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    background-image: url('../../images/vbmfullscreen.png');
+    width: 100svw;
+    height: 100vh;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    video {
+      display: none;
+    }
+.centerr{
+
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+    .vbm-image {
+      max-width: 30%;
+ 
+    margin-top: 0px;
+    }
+  }
+}
