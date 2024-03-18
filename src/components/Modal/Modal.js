@@ -47,7 +47,7 @@ const Modal = ({ openModal, closeModal, isModalOpen }) => {
     <div>
       <CustomModal isOpen={isModalOpen} onClose={closeModal}>
         <div className="modal-content">
-          <div className='col-6' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <div className='col-62' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <img src="/imgs/vbm-logo-large.png" width={100} height={100} alt="" />
             <h2 style={{ fontFamily: 'DrukWideBold', color: '#967029', textAlign: 'center' }}>NEVER STOCK AVAILABLE</h2>
             <button
@@ -65,7 +65,7 @@ const Modal = ({ openModal, closeModal, isModalOpen }) => {
               FOLLOW US
             </button>
           </div>
-          <div className='col-6' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <div className='col-62' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <img src="images/irish_influencer.jpeg" width="100%" height="100%" alt="" />
           </div>
         </div>
