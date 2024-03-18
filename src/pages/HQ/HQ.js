@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './HQ.scss';
 import emailjs from '@emailjs/browser';
 import TimeModal from '../../components/Modal/TimeModal';
@@ -41,7 +41,24 @@ export function HQ() {
   const closeModal = () => {
     setIsModalOpen(false);
   };
+  const [isMobile, setIsMobile] = useState(false);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // Adjust the breakpoint as needed
+    };
+
+    // Add event listener for window resize
+    window.addEventListener('resize', handleResize);
+
+    // Initial check for mobile
+    handleResize();
+
+    // Cleanup event listener on unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   return (
     <div>
       <TimeModal openModal={openModal} closeModal={closeModal} isModalOpen={isModalOpen} />
@@ -53,29 +70,31 @@ export function HQ() {
             </h1>
             <h2>
 
-            OUR IMPACT IN NUMBERS
+              OUR IMPACT IN NUMBERS
 
             </h2>
             <p>A premium creator space catering to all your content needs. Book with the best. Book VBM HQ</p>
           </div>
           <div className="videe" style={{ padding: '40px 0px' }}>
-            <video
-              playsInline
-              autoPlay
-              loop
-              controls
-              preload="metadata"
-              poster="//296b8a-2.myshopify.com/cdn/shop/files/preview_images/87ffe7c1533b4e1f93a78db57893a004.thumbnail.0000000000_1100x.jpg?v=1703955097"
-            >
-              <source
-                src="https://cdn.shopify.com/videos/c/vp/87ffe7c1533b4e1f93a78db57893a004/87ffe7c1533b4e1f93a78db57893a004.HD-1080p-7.2Mbps-22535980.mp4"
-                type="video/mp4"
-              />
-              <img
-                src="//296b8a-2.myshopify.com/cdn/shop/files/preview_images/87ffe7c1533b4e1f93a78db57893a004.thumbnail.0000000000_1100x.jpg?v=1703955097"
-                alt="Video Poster"
-              />
-            </video>
+            {!isMobile && (
+              <video
+                playsInline
+                autoPlay
+                loop
+                controls
+                preload="metadata"
+                poster="//296b8a-2.myshopify.com/cdn/shop/files/preview_images/87ffe7c1533b4e1f93a78db57893a004.thumbnail.0000000000_1100x.jpg?v=1703955097"
+              >
+                <source
+                  src="https://cdn.shopify.com/videos/c/vp/87ffe7c1533b4e1f93a78db57893a004/87ffe7c1533b4e1f93a78db57893a004.HD-1080p-7.2Mbps-22535980.mp4"
+                  type="video/mp4"
+                />
+                <img
+                  src="//296b8a-2.myshopify.com/cdn/shop/files/preview_images/87ffe7c1533b4e1f93a78db57893a004.thumbnail.0000000000_1100x.jpg?v=1703955097"
+                  alt="Video Poster"
+                />
+              </video>
+            )}
           </div>
           <div className='modaal'>
             <p class="product__text inline-richtext caption-with-letter-spacing ">VBM </p>
