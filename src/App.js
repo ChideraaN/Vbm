@@ -11,6 +11,7 @@ import 'react-calendar/dist/Calendar.css';
 function App() {
   return (
     <Router>
+      <div style={{ position:'relative' }}>
       <NavBar />
       <Routes>
         <Route path='/' element={<Home />} />
@@ -20,6 +21,7 @@ function App() {
         <Route path="hq" element={<HQ />} />
       </Routes>
       <Footer />
+      </div>
     </Router>
   );
 }
