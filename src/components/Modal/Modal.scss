@@ -1,0 +1,17 @@
+
+.mobile-modal{
+    display: none;
+}
+.modal-content2{
+    width: 800px;
+    height: 500px;
+}
+
+@media(max-width:880px){
+    .modal-content2{
+        display: none;
+    }
+    .mobile-modal{
+        display: block;
+    }
+}

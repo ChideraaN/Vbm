@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Calendar from 'react-calendar';
 import emailjs from '@emailjs/browser';
-
+import './Modal.scss'
 const CustomModal = ({ isOpen, onClose, children }) => {
     const overlayStyle = {
         display: isOpen ? 'block' : 'none',
@@ -23,10 +23,10 @@ const CustomModal = ({ isOpen, onClose, children }) => {
         backgroundColor: '#fff',
         boxShadow: '0 0 10px rgba(0, 0, 0, 0.3)',
         zIndex: 1001, // Ensure modal is above the overlay
-        height:'auto',
-        width:'auto',
+        height: 'auto',
+        width: 'auto',
         borderRadius: '20px !important',
-        
+
     };
 
     return (
@@ -69,17 +69,29 @@ const time = [
 
 const TimeModal = ({ openModal, closeModal, isModalOpen }) => {
     const [value, onChange] = useState(new Date());
-    const [selectedTime, setSelectedTime] = useState(''); // State to hold the selected time
+    const [selectedTime, setSelectedTime] = useState('');
+    const [dateSelected, setDateSelected] = useState(false); // State to track if date is selected
 
-    // Handle date change
+    const time = [
+        { time: '10:00 AM' },
+        { time: '11:00 AM' },
+        { time: '12:00 PM' },
+        { time: '1:00 PM' },
+        { time: '2:00 PM' },
+        { time: '3:00 PM' },
+        { time: '4:00 PM' },
+        { time: '5:00 PM' },
+    ];
+
     const handleDateChange = (newValue) => {
         onChange(newValue);
+        setDateSelected(true); // Set dateSelected to true when date is selected
     };
 
-    // Handle time selection
     const handleTimeSelection = (time) => {
         setSelectedTime(time);
     };
+
 
     // Handle form submission
     const handleSubmit = (e) => {
@@ -110,7 +122,7 @@ const TimeModal = ({ openModal, closeModal, isModalOpen }) => {
         <div>
             <CustomModal isOpen={isModalOpen} onClose={closeModal}>
                 <div className="modal-content2">
-                    <div className='col-6' style={{  background: '#000',color:'white' }}>
+                    <div className='col-6' style={{ background: '#000', color: 'white' }}>
                         <p class="appointo-product-name" id="appointo-product-name">VBM HQ Session</p>
                         <p class="appointo-location" id="appointo-location">
                             Booking will be confirmed after selecting time and purchasing slots</p>
@@ -118,27 +130,58 @@ const TimeModal = ({ openModal, closeModal, isModalOpen }) => {
                             <Calendar onChange={handleDateChange} value={value} />
                         </div>
                     </div>
-                    <div className='col-6' style={{ background:'#ebebf0' }}>
+                    <div className='col-6' style={{ background: '#ebebf0',overflow:'scroll' }}>
 
                         <p class="slots" id="appointo-location">
                             Available Slots</p>
                         <div className="calendar" style={{ padding: '30px 0px' }}>
-                        {time.map((time, index) => (
-                        <div
-                            className={"available-slots" + (selectedTime === time.time ? " active-time" : "")}
-                            key={index}
-                            onClick={() => handleTimeSelection(time.time)}
-                        >
-                            <h3>{time.time}</h3>
-                        </div>
-                    ))}
+                            {time.map((time, index) => (
+                                <div
+                                    className={"available-slots" + (selectedTime === time.time ? " active-time" : "")}
+                                    key={index}
+                                    onClick={() => handleTimeSelection(time.time)}
+                                >
+                                    <h3>{time.time}</h3>
+                                </div>
+                            ))}
 
                         </div>
                         <div className='' style={{ display: 'flex', justifyContent: 'end' }}>
 
-                            <button type="submit" className="submit-button"  onClick={handleSubmit} style={{  cursor:'pointer' }}>SEND</button>
+                            <button type="submit" className="submit-button" onClick={handleSubmit} style={{ cursor: 'pointer' }}>SEND</button>
                         </div>
                     </div>
+
+                </div>
+                <div className="mobile-modal">
+                    {!dateSelected && (
+                        <div className='date-section' style={{ background: '#000', color: 'white', padding: '20px' }}>
+                            <p className="appointo-product-name" id="appointo-product-name">VBM HQ Session</p>
+                            <p className="appointo-location" id="appointo-location">Booking will be confirmed after selecting time and purchasing slots</p>
+                            <div className="calendar" style={{ padding: '30px 0px' }}>
+                                <Calendar onChange={handleDateChange} value={value} />
+                            </div>
+                        </div>
+                    )}
+                    {dateSelected && (
+                        <div className='time-section' style={{ background: '#ebebf0', padding: '20px', width: '300px' }}>
+                            <p className="slots" id="appointo-location">Available Slots</p>
+                            <div className="calendar" style={{ padding: '30px 0px' }}>
+                                {time.map((time, index) => (
+                                    <div
+                                        className={"available-slots" + (selectedTime === time.time ? " active-time" : "")}
+                                        key={index}
+                                        onClick={() => handleTimeSelection(time.time)}
+                                    >
+                                        <h3>{time.time}</h3>
+                                    </div>
+                                ))}
+                            </div>
+                            <div className='' style={{ display: 'flex', justifyContent: 'end' }}>
+                                <button type="submit" className="submit-button" onClick={handleSubmit} style={{ cursor: 'pointer' }}>SEND</button>
+                            </div>
+                        </div>
+                    )}
 
                 </div>
             </CustomModal>

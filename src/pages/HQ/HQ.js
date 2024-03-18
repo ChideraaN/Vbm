@@ -53,7 +53,7 @@ export function HQ() {
             </h1>
             <h2>
 
-              PRESENTING VBM HQ
+            OUR IMPACT IN NUMBERS
 
             </h2>
             <p>A premium creator space catering to all your content needs. Book with the best. Book VBM HQ</p>
