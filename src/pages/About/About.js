@@ -44,6 +44,16 @@ export function About() {
           </p>
           <h1 style={{ fontFamily: 'DrukWideBold', color: 'var(--vbm-color)', marginBottom: '7%'}}>VOUCHED BY MANY</h1>
         </div>
+      
+      </section>
+      <section id='middle-container'>
+        <div className='middle'>
+     
+          <div className="alt-image-container">
+            <img src='images/jordan_colorways.jpeg' className='' alt='' />
+            <img className="" src='images/vbm_bags.jpeg' alt='' />
+          </div>
+        </div>
       </section>
     </div>
   )
