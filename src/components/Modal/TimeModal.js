@@ -113,6 +113,7 @@ const TimeModal = ({ openModal, closeModal, isModalOpen }) => {
             .then((response) => {
                 console.log('Email sent successfully!', response);
                 // Add any additional logic you want after the email is sent
+                closeModal()
             })
             .catch((error) => {
                 console.error('Error sending email:', error);
