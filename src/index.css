@@ -145,15 +145,19 @@ ul {
 .col-6{
   max-width: 50%;
   width: 100%;
+  padding: 30px 30px;
 }
 @media(max-width:776px){
   .modal-content,.modal-content2{
     flex-direction: column;
-    gap: 30px;
+    
     
   }
   .col-6{
     max-width: 100%;
     width: 100%;
+    padding: 10px 30px;
+    overflow: scroll;
+    height: 400px;
   }
 }
