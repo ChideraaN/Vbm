@@ -29,15 +29,27 @@ const CustomModal = ({ isOpen, onClose, children }) => {
     <div>
       <div style={overlayStyle} onClick={onClose}></div>
       <div style={modalStyle}>
-        {children}
-        <img
-          src='images/close.png'
-          height={30}
-          width={30}
-          onClick={onClose}
-          style={{ position: 'absolute', top: '10px', right: '20px', cursor: 'pointer' }}
-        />
-      </div>
+  {children}
+  {/* Desktop icon */}
+  <img
+    src='images/close.png'
+    height={32}
+    width={32}
+    onClick={onClose}
+    style={{ position: 'absolute', top: '10px', right: '20px', cursor: 'pointer', display: 'none' }}
+    className="desktop-icon"
+  />
+  {/* Mobile icon */}
+  <img
+    src='images/icons8-cross-50.png'
+    height={32}
+    width={32}
+    onClick={onClose}
+    style={{ position: 'absolute', top: '10px', right: '20px', cursor: 'pointer' }}
+    className="mobile-icon"
+  />
+</div>
+
     </div>
   );
 };

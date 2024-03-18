@@ -158,6 +158,9 @@ ul {
     
     
   }
+  .modal-content{
+  gap: 20px;
+  }
   .col-62{
     max-width: 100%;
     width: 100%;
@@ -169,5 +172,24 @@ ul {
     padding: 10px 30px;
     overflow: scroll;
     height: 400px;
+  }
+}
+ 
+  /* Show desktop icon */
+  .desktop-icon {
+    display: block !important;
+  }
+  /* Hide mobile icon */
+  .mobile-icon {
+    display: none;
+  }
+@media (max-width: 767px) {
+  /* Show mobile icon */
+  .mobile-icon {
+    display: block;
+  }
+  /* Hide desktop icon */
+  .desktop-icon {
+    display: none;
   }
 }
