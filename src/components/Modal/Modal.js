@@ -31,9 +31,9 @@ const CustomModal = ({ isOpen, onClose, children }) => {
       <div style={modalStyle}>
         {children}
         <img
-          src='images/icons8-cross-50.png'
-          height={50}
-          width={50}
+          src='images/close.png'
+          height={30}
+          width={30}
           onClick={onClose}
           style={{ position: 'absolute', top: '10px', right: '20px', cursor: 'pointer' }}
         />
