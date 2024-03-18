@@ -110,7 +110,7 @@ const TimeModal = ({ openModal, closeModal, isModalOpen }) => {
         <div>
             <CustomModal isOpen={isModalOpen} onClose={closeModal}>
                 <div className="modal-content2">
-                    <div className='col-6' style={{ padding: '30px', background: '#ebebf0' }}>
+                    <div className='col-6' style={{ padding: '30px', background: '#000',color:'white' }}>
                         <p class="appointo-product-name" id="appointo-product-name">VBM HQ Session</p>
                         <p class="appointo-location" id="appointo-location">
                             Booking will be confirmed after selecting time and purchasing slots</p>
@@ -118,7 +118,7 @@ const TimeModal = ({ openModal, closeModal, isModalOpen }) => {
                             <Calendar onChange={handleDateChange} value={value} />
                         </div>
                     </div>
-                    <div className='col-6' style={{ padding: '30px', }}>
+                    <div className='col-6' style={{ padding: '30px',background:'#ebebf0' }}>
 
                         <p class="slots" id="appointo-location">
                             Available Slots</p>
@@ -136,7 +136,7 @@ const TimeModal = ({ openModal, closeModal, isModalOpen }) => {
                         </div>
                         <div className='' style={{ display: 'flex', justifyContent: 'end' }}>
 
-                            <button type="submit" className="submit-button"  onClick={handleSubmit} style={{ background: '#378760', color: 'white',cursor:'pointer' }}>SEND</button>
+                            <button type="submit" className="submit-button"  onClick={handleSubmit} style={{  cursor:'pointer' }}>SEND</button>
                         </div>
                     </div>
 

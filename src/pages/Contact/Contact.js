@@ -80,7 +80,7 @@ export const Contact = () => {
             >
             </textarea>
           </div>
-          <div onClick={handleSubmit} className='submit-button'>
+          <div onClick={handleSubmit} className='submit-button' style={{ marginTop:'10px' }}>
             SEND
             {/* <button type="submit">Send Email</button> */}
           </div>
