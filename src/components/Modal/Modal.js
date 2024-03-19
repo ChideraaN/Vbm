@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const CustomModal = ({ isOpen, onClose, children }) => {
   const overlayStyle = {
@@ -29,26 +29,28 @@ const CustomModal = ({ isOpen, onClose, children }) => {
     <div>
       <div style={overlayStyle} onClick={onClose}></div>
       <div style={modalStyle}>
-  {children}
-  {/* Desktop icon */}
-  <img
-    src='images/close.png'
-    height={32}
-    width={32}
-    onClick={onClose}
-    style={{ position: 'absolute', top: '10px', right: '20px', cursor: 'pointer', display: 'none' }}
-    className="desktop-icon"
-  />
-  {/* Mobile icon */}
-  <img
-    src='images/icons8-cross-50.png'
-    height={32}
-    width={32}
-    onClick={onClose}
-    style={{ position: 'absolute', top: '10px', right: '20px', cursor: 'pointer' }}
-    className="mobile-icon"
-  />
-</div>
+        {children}
+        {/* Desktop icon */}
+        <img
+          src='images/close.png'
+          height={24}
+          width={24}
+          onClick={onClose}
+          style={{ position: 'absolute', top: '10px', right: '20px', cursor: 'pointer', display: 'none' }}
+          className="desktop-icon"
+          alt=''
+        />
+        {/* Mobile icon */}
+        <img
+          src='images/icons8-cross-50.png'
+          height={24}
+          width={24}
+          onClick={onClose}
+          style={{ position: 'absolute', top: '10px', right: '20px', cursor: 'pointer' }}
+          className="mobile-icon"
+          alt=''
+        />
+      </div>
 
     </div>
   );
@@ -60,22 +62,24 @@ const Modal = ({ openModal, closeModal, isModalOpen }) => {
       <CustomModal isOpen={isModalOpen} onClose={closeModal}>
         <div className="modal-content">
           <div className='col-62' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <img src="/imgs/vbm-logo-large.png" width={100} height={100} alt="" />
+            <img src="/imgs/vbm-logo-large.png" width={100} height={60} alt="" />
             <h2 style={{ fontFamily: 'DrukWideBold', color: '#967029', textAlign: 'center' }}>NEVER STOCK AVAILABLE</h2>
-            <button
-              style={{
-                fontFamily: 'DrukWideBold',
-                color: 'white',
-                background: 'black',
-                textAlign: 'center',
-                border: 'none',
-                padding: '10px 40px',
-                borderRadius: '10px',
-                marginTop: '10px',
-              }}
-            >
-              FOLLOW US
-            </button>
+            <a href='https://linktr.ee/vbmofficial'>
+              <button
+                style={{
+                  fontFamily: 'DrukWideBold',
+                  color: 'white',
+                  background: 'black',
+                  textAlign: 'center',
+                  border: 'none',
+                  padding: '10px 40px',
+                  borderRadius: '10px',
+                  marginTop: '10px',
+                }}
+              >
+                FOLLOW US
+              </button>
+            </a>
           </div>
           <div className='col-62' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <img src="images/irish_influencer.jpeg" width="100%" height="100%" alt="" />

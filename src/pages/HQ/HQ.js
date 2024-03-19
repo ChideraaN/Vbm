@@ -48,14 +48,9 @@ export function HQ() {
       <section>
         <div className="container22">
           <div className="content222">
-            <h1 class="main-page-title page-title h0 scroll-trigger animate--fade-in">
+            <h1 className="main-page-title page-title h0 scroll-trigger animate--fade-in">
               HQ
             </h1>
-            <h2>
-
-            OUR IMPACT IN NUMBERS
-
-            </h2>
             <p>A premium creator space catering to all your content needs. Book with the best. Book VBM HQ</p>
           </div>
           <div className="videe" style={{ padding: '40px 0px' }}>
