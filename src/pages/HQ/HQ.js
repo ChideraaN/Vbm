@@ -1,57 +1,15 @@
-import { useState } from 'react';
 import './HQ.scss';
-import emailjs from '@emailjs/browser';
-import TimeModal from '../../components/Modal/TimeModal';
 
 export function HQ() {
-  const [name, setName] = useState('');
-  const [calendar, setCalendar] = useState('');
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    // Your EmailJS service ID, template ID, and Public Key
-    const serviceId = 'service_5ea1t9n';
-    const templateId = 'template_rpd6vpw';
-    const publicKey = 'KdQihMQM0l6ibmgts';
-
-    // Create a new object that contains dynamic template params
-    const templateParams = {
-      from_name: name,
-      to_name: 'Web Wizard',
-      date: calendar, // You can add more parameters based on your template
-    };
-
-    // Send the email using EmailJS
-    emailjs.send(serviceId, templateId, templateParams, publicKey)
-      .then((response) => {
-        console.log('Email sent successfully!', response);
-        // Add any additional logic you want after the email is sent
-      })
-      .catch((error) => {
-        console.error('Error sending email:', error);
-      });
-  };
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
-
   return (
     <div>
-      <TimeModal openModal={openModal} closeModal={closeModal} isModalOpen={isModalOpen} />
       <section>
         <div className="container22">
           <div className="content222">
             <h1 className="main-page-title page-title h0 scroll-trigger animate--fade-in">
               HQ
             </h1>
-            <p>A premium creator space catering to all your content needs. Book with the best. Book VBM HQ</p>
+            <p>A premium creator space catering to all your content needs. VBM HQ</p>
           </div>
           <div className="videe" style={{ padding: '40px 0px' }}>
             <video
@@ -72,7 +30,7 @@ export function HQ() {
               />
             </video>
           </div>
-          <div className='modaal'>
+          {/* <div className='modaal'>
             <p class="product__text inline-richtext caption-with-letter-spacing ">VBM </p>
             <h2 class="product__title h1">VBM HQ Session
             </h2>
@@ -81,7 +39,7 @@ export function HQ() {
             </span>
             <p class="product__text inline-richtext caption-with-letter-spacing " style={{ marginTop: '10px' }}>Tax included. </p>
             <button className='btnn' onClick={openModal}> Schedule Your Time</button>
-          </div>
+          </div> */}
           {/* <form onSubmit={handleSubmit}>
             <div className='contact-details'>
               <input
